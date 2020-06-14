@@ -5,7 +5,13 @@
 @import 'tailwindcss/utilities';
 
 body {
-  @apply min-h-screen relative p-2;
+  @apply min-h-screen relative py-2;
+}
+
+@screen md {
+  body {
+    @apply p-2;
+  }
 }
 
 body::before {
