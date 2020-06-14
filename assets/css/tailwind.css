@@ -3,3 +3,14 @@
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
+
+body {
+  @apply min-h-screen relative p-2;
+}
+
+body::before {
+  content: '';
+  z-index: -1;
+  background: linear-gradient(to bottom, #6200ee, #04dac6);
+  @apply fixed inset-0 w-full h-full;
+}
