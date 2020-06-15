@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-gray-200 rounded">
+  <div class="bg-gray-200 min-h-screen rounded">
     <Header />
-    <nuxt />
+    <div class="min-h-screen px-8 py-4">
+      <nuxt />
+    </div>
   </div>
 </template>
 
