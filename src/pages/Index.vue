@@ -1,21 +1,19 @@
 <template>
-    <div>
-        <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-        <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-        <h1>Hello, world!</h1>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore
-            tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos
-            quod asperiores
-        </p>
-
-        <p class="home-links">
-            <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-            <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-        </p>
-    </div>
+    <article class="grid gap-6 md:w-3/4 mx-auto">
+        <section>
+            <h2 class="text-5xl text-gray-800">
+                Hi! My name is
+                <span class="text-primary">Ron</span>nie Villar<span class="text-primary">ini</span>
+            </h2>
+            <p class="text-gray-600 text-lg">
+                I'm a full stack developer from Mattoon, Illinois.
+            </p>
+        </section>
+        <h3 class="text-3xl text-gray-800">
+            I breathe life into your business and build software your users will actually enjoy
+            using.
+        </h3>
+    </article>
 </template>
 
 <script>

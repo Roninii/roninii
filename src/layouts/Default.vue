@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-200 min-h-screen rounded">
+    <div class="bg-gray-200 min-h-screen rounded px-8">
         <Header />
         <slot />
     </div>
