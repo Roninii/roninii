@@ -7,10 +7,16 @@
 </template>
 
 <script>
-export default {};
+import Layout from '@/layouts/Default';
+export default {
+    components: {
+        Layout,
+    },
+};
 </script>
 
 <style>
+/* route transition */
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
