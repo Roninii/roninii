@@ -1,15 +1,12 @@
 <template>
     <article class="grid gap-6 md:w-3/4 mx-auto">
         <section>
-            <h2 class="text-5xl text-gray-800">
-                Hi! My name is
+            <h2 class="text-5xl">
                 <span class="text-primary">Ron</span>nie Villar<span class="text-primary">ini</span>
             </h2>
-            <p class="text-gray-600 text-lg">
-                I'm a full stack developer from Mattoon, Illinois.
-            </p>
+            <p class="text-gray-600 text-lg">Full stack developer</p>
         </section>
-        <h3 class="text-3xl text-gray-800">
+        <h3 class="text-3xl">
             I breathe life into your business and build software your users will actually enjoy
             using.
         </h3>
