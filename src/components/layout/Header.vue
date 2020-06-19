@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-a::before {
+li > a::before {
     content: '';
     height: 2px;
     z-index: -1;
@@ -82,7 +82,7 @@ a::before {
     @apply w-full;
 }
 
-a:hover::before {
+li > a:hover::before {
     background-size: 100% 100%;
 }
 </style>
