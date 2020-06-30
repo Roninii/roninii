@@ -12,7 +12,10 @@ module.exports = {
     },
   },
   variants: {
-    padding: ['hover', 'focus']
+    padding: ['hover', 'focus'],
+    borderRadius: ['focus'],
+    border: ['focus'],
+    textColor: ['focus-within']
   },
   plugins: [
     plugin(function({ addUtilities }) {
@@ -20,12 +23,9 @@ module.exports = {
         '.primary-gradient': {
           'background': 'linear-gradient(to right, #6200ee, #04dac6)',
         },
-        '.border-gradient': {
-          'border-image': 'linear-gradient(to right, #6200ee, #04dac6)'
-        }
       }
 
-      addUtilities(newUtilities, ['focus' ])
+      addUtilities(newUtilities, [])
     })
   ],
 }

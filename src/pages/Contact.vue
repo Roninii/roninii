@@ -6,15 +6,18 @@
                 <span class="text-primary">together</span>!
             </h1>
             <form class="md:col-span-2 md:w-1/3 mx-auto grid md:grid-cols-2 col-gap-2 row-gap-4">
-                <BaseInput type="text" name="name" />
-                <BaseInput type="email" name="email" />
-                <textarea
-                    name="services description"
-                    id
-                    cols="40"
-                    rows="5"
-                    class="rounded bg-transparent md:col-span-2 border border-primary focus:outline-none"
-                ></textarea>
+                <BaseInput type="text" name="name" id="contactName" label="name" />
+                <BaseInput type="email" name="email" id="contactEmail" label="email" />
+                <label for="description" class="md:col-span-2 focus-within:text-secondary">
+                    What do you have in mind?
+                    <textarea
+                        name="services description"
+                        id="description"
+                        cols="40"
+                        rows="5"
+                        class="bg-transparent p-2 w-full focus:outline-none rounded border-2 border-primary focus:border-secondary transition-all duration-300 transform focus:translate-y-1"
+                    ></textarea>
+                </label>
                 <BaseButton class="col-span-2" text="Submit" @click.prevent="success = true" />
             </form>
         </div>
@@ -37,7 +40,4 @@ export default {
 </script>
 
 <style scoped>
-textarea:focus {
-    box-shadow: 0 0 3px 1px #7e4ed2;
-}
 </style>

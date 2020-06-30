@@ -1,9 +1,11 @@
 <template>
     <div class="base-input">
+        <label :for="id" v-if="label">{{label}}</label>
         <input
+            :id="id"
             :type="type"
             :name="name"
-            class="relative w-full bg-gray-900 py-2 px-2 focus:outline-none z-10"
+            class="relative w-full bg-gray-900 py-2 px-2 focus:outline-none"
         />
     </div>
 </template>
@@ -17,8 +19,15 @@ export default {
             default: 'text',
         },
         name: {
-            typep: String,
+            type: String,
             required: true,
+        },
+        id: {
+            type: String,
+            required: true,
+        },
+        label: {
+            type: String,
         },
     },
 };
@@ -26,33 +35,27 @@ export default {
 
 <style scoped>
 .base-input {
-    padding: 0.1rem;
     position: relative;
-    z-index: 1;
-    background-image: linear-gradient(#7e4ed2, #7e4ed2);
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: 95% 90%;
-    @apply rounded;
 }
-
 .base-input::after {
-    content: ' ';
     position: absolute;
-    z-index: -1;
-    height: 2px;
-    background-image: linear-gradient(to right, #6200ee, #04dac6);
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
-    background-size: 0% 90%;
-    transition: all 500ms ease-in-out;
+    content: ' ';
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    z-index: 1;
+    height: 2px;
+    @apply bg-primary;
     @apply rounded;
+
+    transition: all 300ms linear;
 }
 
+.base-input:focus-within label {
+    @apply text-secondary;
+}
 .base-input:focus-within::after {
-    background-size: 100% 75%;
+    @apply bg-secondary;
+    transform: translateY(5px);
 }
 </style>
