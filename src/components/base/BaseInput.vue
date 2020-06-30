@@ -1,6 +1,10 @@
 <template>
     <div class="base-input">
-        <input :type="type" class="relative w-full bg-gray-900 py-2 focus:outline-none z-10" />
+        <input
+            :type="type"
+            :name="name"
+            class="relative w-full bg-gray-900 py-2 px-2 focus:outline-none z-10"
+        />
     </div>
 </template>
 
@@ -12,6 +16,10 @@ export default {
             type: String,
             default: 'text',
         },
+        name: {
+            typep: String,
+            required: true,
+        },
     },
 };
 </script>
@@ -21,10 +29,11 @@ export default {
     padding: 0.1rem;
     position: relative;
     z-index: 1;
-    background-image: linear-gradient(#6200ee, #6200ee);
+    background-image: linear-gradient(#7e4ed2, #7e4ed2);
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 95% 90%;
+    @apply rounded;
 }
 
 .base-input::after {

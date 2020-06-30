@@ -11,16 +11,21 @@ module.exports = {
       }
     },
   },
-  variants: {},
+  variants: {
+    padding: ['hover', 'focus']
+  },
   plugins: [
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.primary-gradient': {
           'background': 'linear-gradient(to right, #6200ee, #04dac6)',
+        },
+        '.border-gradient': {
+          'border-image': 'linear-gradient(to right, #6200ee, #04dac6)'
         }
       }
 
-      addUtilities(newUtilities)
+      addUtilities(newUtilities, ['focus' ])
     })
   ],
 }
