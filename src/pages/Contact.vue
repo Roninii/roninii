@@ -16,7 +16,6 @@
             ></textarea>
             <BaseButton class="col-span-2" text="Submit" @click.prevent="success = true" />
         </form>
-        Sent: {{ success }}
     </div>
 </template>
 
