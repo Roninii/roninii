@@ -1,8 +1,6 @@
 <template>
     <header class="py-4 uppercase text-lg font-medium tracking-wide flex justify-between">
-        <h1 class="text-primary">
-            <g-link to="/">Ronini.dev</g-link>
-        </h1>
+        <g-link to="/" class="text-primary">Ronini.dev</g-link>
 
         <nav class="text-right relative">
             <NavButton :menu="!navHidden" @click="navHidden = !navHidden" class="-mr-4 sm:hidden" />
@@ -17,13 +15,6 @@
                         to="/"
                         exact
                     >Home</g-link>
-                </li>
-                <li>
-                    <g-link
-                        class="hover:text-primary relative z-10"
-                        active-class="text-primary"
-                        to="/about"
-                    >About</g-link>
                 </li>
                 <li>
                     <g-link
